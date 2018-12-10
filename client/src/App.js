@@ -1,4 +1,5 @@
 import React from 'react';
+import MKSketch from './img/mk-sketch.png';
 import './App.css';
 
 class App extends React.Component {
@@ -6,6 +7,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Hi Dave!</h1>
+        <img src={MKSketch} />
       </div>
     );
   }
