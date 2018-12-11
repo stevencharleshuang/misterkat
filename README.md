@@ -1,4 +1,6 @@
 # MisterKat
+
+View the world through MisterKat's eyes
 ---
 
 ## Project Statement
