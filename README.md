@@ -14,13 +14,37 @@
 
 
 ---
-## Project Statement <a name="project-statement"/>
+## Project Statement
 
 ---
 ## Project Schedule
 
 ---
 ## User Stories
+#### Landing Page	
+
+As a user, when I arrive on the landing page, I want to see a logo and a navigation bar
+
+#### Blogs Page	
+
+As a user, when I arrive on the blogs page, I want to see a list of blog posts 
+
+#### Full Blog Page	
+
+As a user, when I arrive on a full blog page, I want to see blog images, text content of the blog post, and additional images related to the blog post
+
+#### Recipes Page	
+
+As a user, when I arrive on the recipes page, I want to see a gallery of images representing individual recipes
+
+#### Full Recipe Page
+
+As a user, when I arrive on a full recipe page, I want to see an image of the recipe, an introduction of the recipe, additional images of the recipe, and the actual recipe instructions
+
+#### About Page	
+
+As a user, when I arrive on the about page, I want to see an image of the blog's author and text content of the bio of the author
+
 
 ---
 ## Milestones
@@ -35,7 +59,7 @@
 ## Functional Components
 
 ---
-## Priority Matrix <a name="priority-matrix"/>
+## Priority Matrix
 
 ---
 ## Wireframes and Whiteboarding
@@ -48,3 +72,15 @@ React Component Tree Wireframes
 
 ## Installation
 
+## Libraries and Frameworks
+*	Node
+*	Express
+*	React
+*	PG-Promise
+*	Nodemon
+*	Morgan
+*	Dotenv
+*	BCrypt
+*	React-Router-DOM
+*	Body-Parser
+*	JSON Web Tokens
