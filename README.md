@@ -4,14 +4,17 @@
 
 ## Table of Contents
 1. [Project Statement](#project-statement)
-2. [Project Schedule](#project-schedule)
-3. [User Stories](#user-stories)
-4. [Milestones](#milestones)
-5. [Functional Components](#functional-components)
-6. [Priority Matrix](#priority-matrix)
-7. [Wireframes and Whiteboarding](#wireframes-and-whiteboarding)
-8. [Installation](#installation)
-9. [Libraries and Frameworks](#libraries-and-frameworks)
+1. [Project Schedule](#project-schedule)
+1. [User Stories](#user-stories)
+1. [Milestones](#milestones)  
+   1.1. [Proof of Concept](#proof-of-concept)  
+   1.1. [MVP](#mvp)  
+   1.1. [PMVP](#pmvp)
+1. [Functional Components](#functional-components)
+1. [Priority Matrix](#priority-matrix)
+1. [Wireframes and Whiteboarding](#wireframes-and-whiteboarding)
+1. [Installation](#installation)
+1. [Libraries and Frameworks](#libraries-and-frameworks)
 
 
 ## Project Statement
