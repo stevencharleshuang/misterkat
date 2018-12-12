@@ -10,13 +10,23 @@ body {
   text-align: center;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: 25% 75%;
-  /* justify-items: center; */
+.App a:link, a:visited {
+  color: #404040;
+  text-decoration: none;
 }
 
-.header img {
+.App a:hover, a:active {
+  text-decoration: underline #404040;
+}
+
+.App .header {
+  display: grid;
+  grid-template-columns: 75%;
+  justify-content: center;
+}
+
+.App .header img {
+  justify-self: center;
   height: 10rem;
   width: auto;
   /* Source: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
@@ -29,7 +39,7 @@ body {
                         supported by Chrome and Opera */
 }
 
-.header nav {
+.App .header nav {
   height: 10rem;
   display: flex;
   flex-flow: row nowrap;
@@ -37,9 +47,9 @@ body {
   align-items: center;
 }
 
-.header nav .nav-btn {
+.App .header nav .nav-btn {
   background-color: transparent;
-  border: 0.1rem solid transparent;
+  /* border: 0.1rem solid transparent; */
   border-radius: 0.5rem;
   height: 5rem;
   width: 17rem;
@@ -55,7 +65,8 @@ body {
                         supported by Chrome and Opera */
 }
 
-.header nav .nav-btn:hover {
-  border: 0.1rem solid orange;
+.App .header nav .nav-btn:hover {
+  /* border: 0.1rem solid darkorange; */
+  color: darkorange;
   cursor: pointer;
 }
