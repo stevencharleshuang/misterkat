@@ -1,7 +1,7 @@
 # MisterKat
 
 #### View the world through MisterKat's eyes
----
+
 ## Table of Contents
 1. [Project Statement](#project-statement)
 2. [Project Schedule](#project-schedule)
@@ -11,15 +11,13 @@
 6. [Priority Matrix](#priority-matrix)
 7. [Wireframes and Whiteboarding](#wireframes-and-whiteboarding)
 8. [Installation](#installation)
+9. [Libraries and Frameworks](#libraries-and-frameworks)
 
 
----
 ## Project Statement
 
----
 ## Project Schedule
 
----
 ## User Stories
 #### Landing Page	
 
@@ -46,7 +44,6 @@ As a user, when I arrive on a full recipe page, I want to see an image of the re
 As a user, when I arrive on the about page, I want to see an image of the blog's author and text content of the bio of the author
 
 
----
 ## Milestones
 
 ### Proof of Concept
@@ -55,13 +52,11 @@ As a user, when I arrive on the about page, I want to see an image of the blog's
 
 ### PMVP
 
----
+
 ## Functional Components
 
----
 ## Priority Matrix
 
----
 ## Wireframes and Whiteboarding
 
 Client Wireframes
