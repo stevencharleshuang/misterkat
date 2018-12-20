@@ -70,3 +70,30 @@ body {
   color: darkorange;
   cursor: pointer;
 }
+
+.App .about h1 {
+  color: darkorange;
+  font-size: 2.0rem;
+}
+
+.App .about .about-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.App .about .about-content img {
+  border: 3px solid darkorange;
+  border-radius: 50%;
+  height: 30rem;
+  margin: 0 2rem;
+  width: auto;
+}
+
+.App .about .about-content .text-content {
+  font-size: 1.2rem;
+  margin: 0 2rem;
+  max-width: 50rem;
+  text-align: left;
+  text-indent: 2rem;
+}
