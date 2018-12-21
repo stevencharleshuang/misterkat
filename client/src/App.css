@@ -54,7 +54,7 @@ body {
   height: 5rem;
   width: 17rem;
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   /* Source: https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -96,4 +96,16 @@ body {
   max-width: 50rem;
   text-align: left;
   text-indent: 2rem;
+}
+
+.App .recipes .recipes-list .recipes-gallery {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;  
+  justify-items: center;
+}
+
+.App .recipes .recipes-list .recipes-gallery img {
+  height: auto;
+  width: 200px;
+  margin: 1rem auto;
 }
