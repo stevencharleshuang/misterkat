@@ -1,9 +1,10 @@
 import React from 'react';
 import { Switch, Route, } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
 import About from './components/About';
 import Blogs from './components/Blogs';
+import Header from './components/Header';
+import Hero from './components/Hero';
 import Recipes from './components/Recipes';
 
 class App extends React.Component {
@@ -25,10 +26,12 @@ class App extends React.Component {
       <div className="App">
         <Header handleNavClick={this.handleNavClick}/>
         <Switch>
-          <Route path="/misterkat-adventures" component={Blogs} />
           <Route path="/meet-misterkat" component={About} />
+          <Route path="/misterkat-adventures" component={Blogs} />
+          <Route path="/home" component={Hero} />
           <Route path="/katatatouille" component={Recipes} />
         </Switch>
+        <Hero />
       </div>
     );
   }
