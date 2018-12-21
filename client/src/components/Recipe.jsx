@@ -1,7 +1,9 @@
 import React from 'react';
 
-export default function Recipe() {
+export default function Recipe(props) {
   return (
-    <h1>This is the Recipe component</h1>
+    <div className="recipe">
+      <h1>This is the Recipe component</h1>
+    </div>
   );
 }

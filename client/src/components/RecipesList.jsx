@@ -13,6 +13,7 @@ export default function RecipesList(props) {
         onClick={props.handleClick} />
     );
   });
+  console.log('recipes list selected recipe: ', props.selectedRecipe);
   return (
     <div className="recipes-list">
       <div className="recipes-gallery">
