@@ -2,13 +2,19 @@ import React from 'react';
 import Recipe from './Recipe';
 
 export default function RecipesList(props) {
-  console.log(props);
-  let RecipesGallery = props.recipesImages.map((imageURL, i) => {
-    return <img src={imageURL} alt="imageURL" key="i" />     
-  })
+  // console.log(props);
+  let RecipesGallery = props.recipes.map((recipe, i) => {
+    return (
+      <img 
+        src={recipe.imageURL} 
+        alt={recipe.name} 
+        id={recipe.name} 
+        key={i}  
+        onClick={props.handleClick} />
+    );
+  });
   return (
     <div className="recipes-list">
-      <h1>This is the RecipesList component</h1>
       <div className="recipes-gallery">
         {RecipesGallery}
       </div> 
