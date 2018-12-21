@@ -28,10 +28,9 @@ class App extends React.Component {
         <Switch>
           <Route path="/meet-misterkat" component={About} />
           <Route path="/misterkat-adventures" component={Blogs} />
-          <Route path="/home" component={Hero} />
           <Route path="/katatatouille" component={Recipes} />
+          <Route path="/" component={Hero} />
         </Switch>
-        <Hero />
       </div>
     );
   }
