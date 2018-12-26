@@ -114,3 +114,22 @@ body {
 .App .recipes .recipes-list .recipes-gallery img:hover {
   cursor: pointer;
 }
+
+.App .recipes .recipe {
+  margin: 0 3rem;
+}
+
+.App .recipes .recipe h1 {
+  font-size: 1.4rem;
+}
+
+.App .recipes .recipe img {
+  height: 400px;
+  width: auto;
+}
+
+.App .recipes .recipe p {
+  font-size: 1.2rem;
+  text-align: left;
+  text-indent: 2rem;
+}
