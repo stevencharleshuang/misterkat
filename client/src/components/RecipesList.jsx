@@ -1,5 +1,4 @@
 import React from 'react';
-import Recipe from './Recipe';
 
 export default function RecipesList(props) {
   // console.log(props);
@@ -19,7 +18,6 @@ export default function RecipesList(props) {
       <div className="recipes-gallery">
         {RecipesGallery}
       </div> 
-      {/* <Recipe /> */}
     </div>
   );
 }

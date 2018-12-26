@@ -1,12 +1,14 @@
 import React from 'react';
+import Recipe from './Recipe';
 import RecipesList from './RecipesList';
+
 
 export default class Recipes extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedRecipe: '',
-      // recipes array of object will be refactored once fetching from the backend is integrated
+      // recipes array of objects will be refactored once fetching from the backend is integrated
       recipes: [
         {
           imageURL: 'https://cdn-image.myrecipes.com/sites/default/files/styles/4_3_horizontal_-_1200x900/public/1506120378/MR_0917170472.jpg?itok=aWyDp3CA',
@@ -57,19 +59,29 @@ export default class Recipes extends React.Component {
     }
   }
   handleClick = (e) => {
+    let id = e.target.id;
+    let selectedRecipe = this.state.recipes.filter(recipe => recipe.name === id);
+    console.log({selectedRecipe});
     this.setState({
-      selectedRecipe: e.target.id
-    })
-    // console.log(e.target.id);
+      selectedRecipe,
+    });
   }
   render() {
     console.log(this.state);
     return (
       <div className="recipes">
         <h1>Katatatouille</h1>
-        (!this.state.selectedRecipe )
-        ? 
-        : <RecipesList recipes={this.state.recipes} selectedRecipe={this.state.selectedRecipe} handleClick={this.handleClick} />
+        {
+        (this.state.selectedRecipe !== '')
+        ? <Recipe  
+            selectedRecipe={this.state.selectedRecipe}
+          />
+        : <RecipesList 
+            recipes={this.state.recipes} 
+            selectedRecipe={this.state.selectedRecipe} 
+            handleClick={this.handleClick} 
+          />
+        }
       </div>
     );
   }
