@@ -58,16 +58,24 @@ export default class Recipes extends React.Component {
       ]
     }
   }
+
   handleClick = (e) => {
     let id = e.target.id;
     let selectedRecipe = this.state.recipes.filter(recipe => recipe.name === id);
-    console.log({selectedRecipe});
+    // console.log({selectedRecipe});
     this.setState({
       selectedRecipe,
     });
   }
+  
+  handleClearSelection = () => {
+    this.setState({
+      selectedRecipe: '',
+    })
+  }
+  
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className="recipes">
         <h1>Katatatouille</h1>
@@ -75,6 +83,7 @@ export default class Recipes extends React.Component {
         (this.state.selectedRecipe !== '')
         ? <Recipe  
             selectedRecipe={this.state.selectedRecipe}
+            handleClearSelection={this.handleClearSelection}
           />
         : <RecipesList 
             recipes={this.state.recipes} 

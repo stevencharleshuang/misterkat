@@ -16,6 +16,7 @@ body {
 }
 
 .App a:hover, a:active {
+  color: darkorange;
   text-decoration: underline #404040;
 }
 
@@ -43,7 +44,7 @@ body {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  height: 10rem;
+  /* height: 10rem; */
   justify-content: space-evenly; 
 }
 
@@ -103,12 +104,13 @@ body {
   grid-row-gap: 1rem;
   grid-template-columns: 33% 33% 33%;  
   justify-items: center;
+  margin-bottom: 3rem;
 }
 
 .App .recipes .recipes-list .recipes-gallery img {
   height: auto;
-  width: 200px;
   /* margin: 1rem auto; */
+  width: 200px;
 }
 
 .App .recipes .recipes-list .recipes-gallery img:hover {
@@ -116,6 +118,12 @@ body {
 }
 
 .App .recipes .recipe {
+  margin: 0 3rem 3rem;
+}
+
+.App .recipes .recipe a {
+  font-size: 1.2rem;
+  font-weight: 500;
   margin: 0 3rem;
 }
 
