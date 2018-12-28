@@ -8,7 +8,8 @@ export default class Recipes extends React.Component {
     super(props);
     this.state = {
       selectedRecipe: '',
-      // recipes array of objects will be refactored once fetching from the backend is integrated
+      // recipes array of objects to be refactored once fetching from the back end is integrated
+      // Dummy images and recipe names taken from myrecipes.com
       recipes: [
         {
           imageURL: 'https://cdn-image.myrecipes.com/sites/default/files/styles/4_3_horizontal_-_1200x900/public/1506120378/MR_0917170472.jpg?itok=aWyDp3CA',
