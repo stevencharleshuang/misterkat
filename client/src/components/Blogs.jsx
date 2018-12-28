@@ -43,11 +43,30 @@ export default class Recipes extends React.Component {
       ],
     }
   }
+
+  handleClick = (e) => {
+    let id = e.target.id;
+    let selectedBlog = this.state.blogs.filter(blog => blog.name === id);
+    this.setState({
+      selectedBlog,
+    });
+  }
+  
+  handleClearSelection = () => {
+    this.setState({
+      selectedBlog: '',
+    })
+  }
+
   render() {
     return (
       <div className="blogs">
-        <h1>This is the Blogs component</h1>
-        <BlogsList />
+        <h1>MisterKat Adventures</h1>
+        <BlogsList 
+          blogs={this.state.blogs} 
+          selectedBlog={this.state.selectedBlog}
+          handleClick={this.handleClick}
+        />
       </div>
     );
   }
