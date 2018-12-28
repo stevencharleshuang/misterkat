@@ -72,9 +72,35 @@ body {
   cursor: pointer;
 }
 
-.App .about h1, .App .recipes h1 {
+.App .about h1, .App .recipes h1, .App .blogs h1 {
   color: darkorange;
   font-size: 2.0rem;
+}
+
+.App .blogs {
+  margin-bottom: 3rem;
+}
+
+.App .blogs .blogs-list {
+  
+}
+
+.App .blogs .blogs-list .blog-post {
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  margin-bottom: 1rem;
+  justify-items: center; 
+}
+
+.App .blogs .blogs-list .blog-post img {
+  grid-column: 2;
+  height: auto;
+  max-width: 100%;
+}
+
+.App .blogs .blogs-list .blog-post .blog-excerpt {
+  font-size: 1.2rem;
+  grid-column: 3;
 }
 
 .App .about .about-content {
