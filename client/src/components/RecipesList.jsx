@@ -4,12 +4,15 @@ export default function RecipesList(props) {
   // console.log(props);
   let RecipesGallery = props.recipes.map((recipe, i) => {
     return (
-      <img 
-        src={recipe.imageURL} 
-        alt={recipe.name} 
-        id={recipe.name} 
-        key={i}  
-        onClick={props.handleClick} />
+      <div className="recipes-gallery-icon">
+        <h3>{recipe.name}</h3>
+        <img 
+          src={recipe.imageURL} 
+          alt={recipe.name} 
+          id={recipe.name} 
+          key={i}  
+          onClick={props.handleClick} />
+      </div>
     );
   });
   // console.log('recipes list selected recipe: ', props.selectedRecipe);

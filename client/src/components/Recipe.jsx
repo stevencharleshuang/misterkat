@@ -12,7 +12,7 @@ export default function Recipe(props) {
           {selectedRecipe.content}
         </p>
       </section>
-      <a href="#" onClick={props.handleClearSelection}>Back to Gallery</a>
+      <a href="#" onClick={props.handleClearSelection}>Back to Recipes</a>
     </div>
   );
 }

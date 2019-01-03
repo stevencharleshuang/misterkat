@@ -13,7 +13,7 @@ export default function Blog(props) {
       <p>
         {selectedBlog.content}
       </p>
-      <a href="#" onClick={props.handleClearSelection}>Back to Gallery</a>
+      <a href="#" onClick={props.handleClearSelection}>Back to Blogs</a>
     </div>
   );
 }

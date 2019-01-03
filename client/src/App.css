@@ -177,7 +177,11 @@ body {
   margin-bottom: 3rem;
 }
 
-.App .recipes .recipes-list .recipes-gallery img {
+.App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon h3 {
+  font-size: 1.2rem;
+}
+
+.App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon img {
   height: auto;
   /* margin: 1rem auto; */
   opacity: 0.7;
@@ -185,7 +189,7 @@ body {
   width: 200px;
 }
 
-.App .recipes .recipes-list .recipes-gallery img:hover {
+.App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon img:hover {
   opacity: 1;
   transform: scale(1.05);
   cursor: pointer;
