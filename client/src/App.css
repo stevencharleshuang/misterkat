@@ -12,6 +12,9 @@ body {
 
 .App a:link, a:visited {
   color: #404040;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
@@ -66,11 +69,10 @@ body {
                         supported by Chrome and Opera */
 }
 
-.App .header nav .nav-btn:hover {
-  /* border: 0.1rem solid darkorange; */
+/* .App .header nav .nav-btn:hover {
   color: darkorange;
   cursor: pointer;
-}
+} */
 
 .App .about h1, .App .recipes h1, .App .blogs h1 {
   color: darkorange;
@@ -96,6 +98,8 @@ body {
   grid-column: 2;
   height: auto;
   max-width: 100%;
+  opacity: 0.7;
+  transition: opacity .2s ease-in-out;
 }
 
 .App .blogs .blogs-list .blog-post .blog-excerpt {
@@ -105,11 +109,19 @@ body {
 .App .blogs .blogs-list .blog-post .blog-excerpt h2 {
   font-size: 1.4rem;
   grid-column: 3;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
+.App .blogs .blogs-list .blog-post:hover,
 .App .blogs .blogs-list .blog-post img:hover,
 .App .blogs .blogs-list .blog-post .blog-excerpt:hover {
   cursor: pointer;
+}
+
+.App .blogs .blogs-list .blog-post:hover img {
+  opacity: 1;
 }
 
 .App .blogs .blogs-list .blog-post:hover h2 {
@@ -168,10 +180,14 @@ body {
 .App .recipes .recipes-list .recipes-gallery img {
   height: auto;
   /* margin: 1rem auto; */
+  opacity: 0.7;
+  transition: all .2s ease-in-out;
   width: 200px;
 }
 
 .App .recipes .recipes-list .recipes-gallery img:hover {
+  opacity: 1;
+  transform: scale(1.05);
   cursor: pointer;
 }
 
