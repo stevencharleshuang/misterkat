@@ -6,7 +6,7 @@ export default function About() {
     <div className="about">
       <h1>Meet MisterKat</h1>
       <div className="about-content">
-        <img src={ProfilePic} alt="Profile Picture"/>
+        <img src={ProfilePic} alt="Profile"/>
         <div className="text-content">
           <p>
             Lorem ipsum dolor sit amet, a risus eget pulvinar proin, lorem ut convallis vel duis. Nam ullam ligula at arcu cupidatat, lorem justo leo nulla, mattis ipsum metus vitae sapien, nisl mus fusce etiam. Et ligula. Porttitor non in turpis sit libero justo, cursus at massa. In lorem nulla rhoncus, pretium arcu torquent nec sapien. Vestibulum dui nascetur, purus augue arcu vestibulum, phasellus placerat donec mauris, molestie nonummy turpis tristique dapibus etiam, lobortis urna blandit non. Bibendum nibh ullamcorper id suspendisse sodales convallis, hac nunc feugiat. Tincidunt nunc viverra, et mi fermentum, magna auctor lectus phasellus blandit, ut ut eros bibendum placerat, id rem sit orci. Integer mi nunc luctus conubia, elementum in lectus, neque massa sollicitudin proin. A sem nisl convallis ac nunc. Erat sed consequat purus nisl dolor pellentesque, faucibus sed.

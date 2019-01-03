@@ -4,7 +4,8 @@ export default function BlogsList(props) {
   let BlogsSelection = props.blogs.map((blog, i) => {
     return (
       <article className="blog-post" key={i}>
-        <img 
+        <img
+          alt={blog.title} 
           src={blog.imageURL}
           title={blog.title}
           onClick={props.handleClick}

@@ -82,6 +82,12 @@ a, h1, h2, h3 {
                         supported by Chrome and Opera */
 }
 
+.App .hero {
+  padding: 0;
+  /* background-image: url('./img/hero-bg-1.jpg'); */
+  background-size: cover;
+}
+
 /* .App .header nav .nav-btn:hover {
   color: darkorange;
   cursor: pointer;
@@ -217,7 +223,7 @@ a, h1, h2, h3 {
 
 .App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon img:hover h1 {
   color: darkorange;
-  text-decoration: underline #404040;
+  text-decoration: underline #404040; 
 }
 
 .App .recipes .recipe {

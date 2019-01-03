@@ -6,7 +6,7 @@ import LogoPic from '../img/mk-sketch.png';
 export default function Header(props) {
   return(
     <div className="header">
-      <Link to="/"><img src={LogoPic} alt="Logo Picture" /></Link>
+      <Link to="/"><img src={LogoPic} alt="Logo" /></Link>
       <Nav handleNavClick={props.handleNavClick}/>
     </div>
   );
