@@ -5,7 +5,7 @@ export default function Recipe(props) {
   let selectedRecipe = props.selectedRecipe[0];
   return (
     <div className="recipe">
-      <h1>{selectedRecipe.name}</h1>
+      <h2>{selectedRecipe.name}</h2>
       <img src={selectedRecipe.imageURL} alt={selectedRecipe.name} />
       <section>
         <p>

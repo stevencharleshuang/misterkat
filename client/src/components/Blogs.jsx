@@ -1,4 +1,5 @@
 import React from 'react';
+import Blog from './Blog';
 import BlogsList from './BlogsList';
 
 export default class Recipes extends React.Component {
@@ -46,7 +47,7 @@ export default class Recipes extends React.Component {
 
   handleClick = (e) => {
     let id = e.target.id;
-    let selectedBlog = this.state.blogs.filter(blog => blog.name === id);
+    let selectedBlog = this.state.blogs.filter(blog => blog.title === id);
     this.setState({
       selectedBlog,
     });
@@ -62,11 +63,18 @@ export default class Recipes extends React.Component {
     return (
       <div className="blogs">
         <h1>MisterKat Adventures</h1>
-        <BlogsList 
-          blogs={this.state.blogs} 
-          selectedBlog={this.state.selectedBlog}
-          handleClick={this.handleClick}
-        />
+        {
+          (this.state.selectedBlog !== '')
+          ? <Blog  
+              selectedBlog={this.state.selectedBlog}
+              handleClearSelection={this.handleClearSelection}
+            />
+          : <BlogsList 
+            blogs={this.state.blogs} 
+            selectedBlog={this.state.selectedBlog}
+            handleClick={this.handleClick}
+          />
+        }
       </div>
     );
   }

@@ -102,6 +102,38 @@ body {
   font-size: 1.2rem;
   grid-column: 3;
 }
+.App .blogs .blogs-list .blog-post .blog-excerpt h2 {
+  font-size: 1.4rem;
+  grid-column: 3;
+}
+
+.App .blogs .blogs-list .blog-post img:hover,
+.App .blogs .blogs-list .blog-post .blog-excerpt:hover {
+  cursor: pointer;
+}
+
+.App .blogs .blogs-list .blog-post:hover h2 {
+  color: darkorange;
+}
+
+.App .blogs .blog {
+  margin: 0 3rem 3rem;
+}
+
+.App .blogs .blog h2 {
+  font-size: 1.4rem;
+}
+
+.App .blogs .blog img {
+  height: 400px;
+  width: auto;
+}
+
+.App .blogs .blog p {
+  font-size: 1.2rem;
+  text-align: left;
+  text-indent: 2rem;
+}
 
 .App .about .about-content {
   display: flex;
@@ -147,13 +179,14 @@ body {
   margin: 0 3rem 3rem;
 }
 
-.App .recipes .recipe a {
+.App .recipes .recipe a,
+.App .blogs .blog a {
   font-size: 1.2rem;
   font-weight: 500;
   margin: 0 3rem;
 }
 
-.App .recipes .recipe h1 {
+.App .recipes .recipe h2 {
   font-size: 1.4rem;
 }
 
