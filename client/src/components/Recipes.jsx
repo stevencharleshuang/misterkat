@@ -61,7 +61,7 @@ export default class Recipes extends React.Component {
   }
 
   handleClick = (e) => {
-    let id = e.target.id;
+    let id = e.target.title;
     let selectedRecipe = this.state.recipes.filter(recipe => recipe.name === id);
     // console.log({selectedRecipe});
     this.setState({

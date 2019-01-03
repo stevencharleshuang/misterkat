@@ -1,9 +1,22 @@
+/* Imported Fonts 
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Slabo 27px', serif;
+*/
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: 'Slabo 27px', serif;
   font-size: 62.5%;
+  letter-spacing: 0.9px;
+}
+
+a, h1, h2, h3 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400px;
+  letter-spacing: 0.9px;
 }
 
 .App {
@@ -95,6 +108,7 @@ body {
 }
 
 .App .blogs .blogs-list .blog-post img {
+  border-radius: 5px;
   grid-column: 2;
   height: auto;
   max-width: 100%;
@@ -177,11 +191,16 @@ body {
   margin-bottom: 3rem;
 }
 
+.App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon {
+  cursor: pointer;
+}
+
 .App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon h3 {
   font-size: 1.2rem;
 }
 
 .App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon img {
+  border-radius: 5px;
   height: auto;
   /* margin: 1rem auto; */
   opacity: 0.7;
@@ -189,10 +208,16 @@ body {
   width: 200px;
 }
 
+.App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon:hover img,
 .App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon img:hover {
   opacity: 1;
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.App .recipes .recipes-list .recipes-gallery .recipes-gallery-icon img:hover h1 {
+  color: darkorange;
+  text-decoration: underline #404040;
 }
 
 .App .recipes .recipe {

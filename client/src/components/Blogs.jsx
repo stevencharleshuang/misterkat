@@ -46,7 +46,8 @@ export default class Recipes extends React.Component {
   }
 
   handleClick = (e) => {
-    let id = e.target.id;
+    // console.log('handleclick:', e.target.title);
+    let id = e.target.title;
     let selectedBlog = this.state.blogs.filter(blog => blog.title === id);
     this.setState({
       selectedBlog,
