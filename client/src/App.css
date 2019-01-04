@@ -3,16 +3,6 @@
   font-family: 'Slabo 27px', serif;
 */
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Slabo 27px', serif;
-  font-size: 62.5%;
-  letter-spacing: 0.9px;
-}
-
 a, h1, h2, h3 {
   font-family: 'Dosis', sans-serif;
   font-weight: 400px;
@@ -37,9 +27,14 @@ a, h1, h2, h3 {
 }
 
 .App .header {
+  margin: 0;
+  background-color: white;
   display: grid;
   grid-template-columns: 75%;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 .App .header img {
@@ -84,10 +79,11 @@ a, h1, h2, h3 {
 
 .App .header nav .dropdown .dropdown-list {
   background-color: darkorange;
+  border-radius: 0 0 20px 20px;
   list-style-type: none;
-  padding: 0.5rem;
+  padding: 1rem;
   position: fixed;
-  top: 13rem;
+  top: 242px;
 }
 
 .App .header nav .dropdown .dropdown-list .dropdown-list-item {
@@ -101,6 +97,13 @@ a, h1, h2, h3 {
   color: darkorange;
   cursor: pointer;
 } */
+
+.App main {
+  /* margin: 242px 0 0; */
+  position: relative;
+  top: 242px;
+  z-index: 0;
+}
 
 .App .hero {
   padding: 0;

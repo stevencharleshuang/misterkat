@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 export default function Nav(props) {
   return(
     <nav>
-      <DropDown handleNavClick={props.handleNavClick} />
+      <DropDown 
+        displayDropDown={props.displayDropDown}
+        handleNavClick={props.handleNavClick} 
+      />
       <Link to="/meet-misterkat">
         <div 
           className="nav-btn" 

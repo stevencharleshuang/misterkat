@@ -11,26 +11,38 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      navSelection: ''
+      // navSelection: '',
+      // displayDropDown: false,
     };
   }
+
   handleNavClick = (e) => {
-    // console.log('Nav button clicked!', e.target.id);
-    this.setState(({
-      navSelection: e.target.id
-    }));
+    console.log('Nav button clicked!', e.target.id);
+    // this.setState(({
+    //   navSelection: e.target.id
+    // }));
+    // if (e.target.id !== 'misterkat-adventures') {
+    //   this.setState({
+    //     displayDropDown: false,
+    //   });
+    // }
   }
   render() {
-    // console.log(this.state);
+    console.log('App.js State: ', this.state);
     return (
       <div className="App">
-        <Header handleNavClick={this.handleNavClick}/>
-        <Switch>
-          <Route path="/meet-misterkat" component={About} />
-          <Route path="/misterkat-adventures" component={Blogs} />
-          <Route path="/katatatouille" component={Recipes} />
-          <Route path="/" component={Hero} />
-        </Switch>
+        <Header 
+          displayDropDown={this.state.displayDropDown}
+          handleNavClick={this.handleNavClick}
+        />
+        <main>
+          <Switch>
+            <Route path="/meet-misterkat" component={About} />
+            <Route path="/misterkat-adventures" component={Blogs} />
+            <Route path="/katatatouille" component={Recipes} />
+            <Route path="/" component={Hero} />
+          </Switch>
+        </main>
       </div>
     );
   }

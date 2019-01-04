@@ -5,9 +5,10 @@ export default class DropDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayDropDown: false,
+      displayDropDown: this.props.displayDropDown,
     }
   }
+  
   showDropDown = (e) => {
     e.preventDefault();
     this.setState((prevState) => ({

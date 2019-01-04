@@ -7,7 +7,10 @@ export default function Header(props) {
   return(
     <div className="header">
       <Link to="/"><img src={LogoPic} alt="Logo" /></Link>
-      <Nav handleNavClick={props.handleNavClick}/>
+      <Nav 
+        displayDropDown={props.displayDropDown}
+        handleNavClick={props.handleNavClick}
+      />
     </div>
   );
 }
