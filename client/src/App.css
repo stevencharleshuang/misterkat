@@ -23,7 +23,7 @@ a, h1, h2, h3 {
   text-align: center;
 }
 
-.App a:link, a:visited {
+.App a:link, .App a:visited {
   color: #404040;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -31,7 +31,7 @@ a, h1, h2, h3 {
   text-decoration: none;
 }
 
-.App a:hover, a:active {
+.App a:hover, .App a:active {
   color: darkorange;
   text-decoration: underline #404040;
 }
@@ -82,10 +82,19 @@ a, h1, h2, h3 {
                         supported by Chrome and Opera */
 }
 
-.App .hero {
-  padding: 0;
-  /* background-image: url('./img/hero-bg-1.jpg'); */
-  background-size: cover;
+.App .header nav .dropdown .dropdown-list {
+  background-color: darkorange;
+  list-style-type: none;
+  padding: 0.5rem;
+  position: fixed;
+  top: 13rem;
+}
+
+.App .header nav .dropdown .dropdown-list .dropdown-list-item {
+  margin: 0.25rem auto;
+  text-align: left;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.3rem;
 }
 
 /* .App .header nav .nav-btn:hover {
@@ -93,7 +102,15 @@ a, h1, h2, h3 {
   cursor: pointer;
 } */
 
-.App .about h1, .App .recipes h1, .App .blogs h1 {
+.App .hero {
+  padding: 0;
+  /* background-image: url('./img/hero-bg-1.jpg'); */
+  background-size: cover;
+}
+
+.App .about h1, 
+.App .recipes h1, 
+.App .blogs h1 {
   color: darkorange;
   font-size: 2.0rem;
 }

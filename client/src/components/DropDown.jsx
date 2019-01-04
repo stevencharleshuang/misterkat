@@ -14,6 +14,7 @@ export default class DropDown extends React.Component {
       displayDropDown: !prevState.displayDropDown,
     }));
   }
+
   hideDropDown = (e) => {
     e.preventDefault();
     this.setState((prevState) => ({
@@ -25,34 +26,45 @@ export default class DropDown extends React.Component {
   render() {
     console.log('DropDown State', this.state);
     return(
-      // <Link to="/misterkat-adventures">
-        <div 
-          className="nav-btn" 
+      <div 
+          className="nav-btn dropdown" 
           id="misterkat-adventures" 
           // onClick={this.props.handleNavClick}
-          onClick={this.showDropDown}
-        >
+          >
+          <Link to="/misterkat-adventures" onClick={this.showDropDown}>
           MisterKat Adventures
+          </Link>
           {
             this.state.displayDropDown
-            ? <ul className="dropdown">
-              <li className="dropdown-item" id="local">
+            ? <ul className="dropdown-list">
+              <li 
+                className="dropdown-list-item" 
+                id="local"
+              >
                 Local
               </li>
-              <li className="dropdown-item" id="east-coast">
+              <li 
+                className="dropdown-list-item" 
+                id="east-coast"
+              >
                 East Coast
               </li>
-              <li className="dropdown-item" id="usa">
+              <li 
+                className="dropdown-list-item" 
+                id="usa"
+              >
                 USA
               </li>
-              <li className="dropdown-item" id="international">
+              <li 
+                className="dropdown-list-item" 
+                id="international"
+              >
                 International
               </li>
             </ul>
             : null
           }
         </div>
-      // </Link>
     );
   }
 }
