@@ -3,7 +3,11 @@
   font-family: 'Slabo 27px', serif;
 */
 
-a, h1, h2, h3 {
+a, 
+h1, 
+h2, 
+h3,
+.App .header nav .dropdown {
   font-family: 'Dosis', sans-serif;
   font-weight: 400px;
   letter-spacing: 0.9px;
@@ -13,7 +17,9 @@ a, h1, h2, h3 {
   text-align: center;
 }
 
-.App a:link, .App a:visited {
+.App a:link, 
+.App a:visited,
+.App .header nav .dropdown {
   color: #404040;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -21,7 +27,9 @@ a, h1, h2, h3 {
   text-decoration: none;
 }
 
-.App a:hover, .App a:active {
+.App a:hover, 
+.App a:active,
+.App .header nav .dropdown:hover {
   color: darkorange;
   text-decoration: underline #404040;
 }
@@ -106,7 +114,6 @@ a, h1, h2, h3 {
 }
 
 .App .hero {
-  padding: 0;
   /* background-image: url('./img/hero-bg-1.jpg'); */
   background-size: cover;
 }

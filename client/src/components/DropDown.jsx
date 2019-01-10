@@ -8,7 +8,7 @@ export default class DropDown extends React.Component {
       displayDropDown: this.props.displayDropDown,
     }
   }
-  
+
   showDropDown = (e) => {
     e.preventDefault();
     this.setState((prevState) => ({
@@ -30,11 +30,10 @@ export default class DropDown extends React.Component {
       <div 
           className="nav-btn dropdown" 
           id="misterkat-adventures" 
+          onClick={this.showDropDown}
           // onClick={this.props.handleNavClick}
           >
-          <Link to="/misterkat-adventures" onClick={this.showDropDown}>
           MisterKat Adventures
-          </Link>
           {
             this.state.displayDropDown
             ? <ul className="dropdown-list">
@@ -42,7 +41,9 @@ export default class DropDown extends React.Component {
                 className="dropdown-list-item" 
                 id="local"
               >
+              <Link to="/misterkat-adventures">
                 Local
+              </Link>
               </li>
               <li 
                 className="dropdown-list-item" 
