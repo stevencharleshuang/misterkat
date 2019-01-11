@@ -65,6 +65,8 @@ h3,
   flex-flow: row nowrap;
   /* height: 10rem; */
   justify-content: space-evenly; 
+  margin: 0;
+  top: 0;
 }
 
 .App .header nav .nav-btn {
@@ -277,4 +279,11 @@ h3,
   font-size: 1.2rem;
   text-align: left;
   text-indent: 2rem;
+}
+
+.sticky {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }

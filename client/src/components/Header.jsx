@@ -6,10 +6,13 @@ import LogoPic from '../img/mk-sketch.png';
 export default function Header(props) {
   return(
     <div className="header">
-      <Link to="/"><img src={LogoPic} alt="Logo" /></Link>
+      {props.scroll > props.top 
+        ? null : <Link to="/"><img src={LogoPic} alt="Logo" /></Link>}
       <Nav 
         displayDropDown={props.displayDropDown}
         handleNavClick={props.handleNavClick}
+        scroll={props.scroll}
+        top={props.top}
       />
     </div>
   );

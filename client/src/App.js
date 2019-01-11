@@ -16,6 +16,27 @@ class App extends React.Component {
     };
   }
 
+  // Stick Nav pattern adapted from https://mattgaskey.com/blog/sticky-nav-in-react/
+  componentDidMount() {
+    const nav = document.querySelector('nav');
+    this.setState({ top: nav.offsetTop, height: nav.offsetHeight  });
+    window.addEventListener('scroll', this.handleScroll);
+  };
+  
+  componentDidUpdate() {
+    this.state.scroll > this.state.top 
+    ? document.body.style.paddingTop = `${this.state.height}px` 
+    : document.body.style.paddingTop = 0;
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  };
+  
+  handleScroll = () => {
+    this.setState({ scroll: window.scrollY });
+  };
+
   handleNavClick = (e) => {
     console.log('Nav button clicked!', e.target.id);
     // this.setState(({
@@ -34,8 +55,10 @@ class App extends React.Component {
         <Header 
           displayDropDown={this.state.displayDropDown}
           handleNavClick={this.handleNavClick}
+          scroll={this.state.scroll}
+          top={this.state.top}
         />
-        <main>
+        <main onScroll={this.handleScroll}>
           <Switch>
             <Route path="/meet-misterkat" component={About} />
             <Route path="/misterkat-adventures" component={Blogs} />
