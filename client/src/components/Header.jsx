@@ -7,7 +7,8 @@ export default function Header(props) {
   return(
     <div className="header">
       {props.scroll > props.navInitialTop 
-        ? null : <Link to="/"><img src={LogoPic} alt="Logo" /></Link>}
+        ? null 
+        : <div className="header-logo"><h1>MisterKat</h1><Link to="/"><img src={LogoPic} alt="Logo" /></Link></div>}
       <Nav 
         displayDropDown={props.displayDropDown}
         handleNavClick={props.handleNavClick}

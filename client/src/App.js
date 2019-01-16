@@ -19,16 +19,25 @@ class App extends React.Component {
   // Stick Nav pattern adapted from https://mattgaskey.com/blog/sticky-nav-in-react/
   componentDidMount() {
     const nav = document.querySelector('nav');
+    const main = document.querySelector('main');
+    main.style.paddingTop = `${nav.offsetTop}`;
     this.setState({ top: nav.offsetTop, height: nav.offsetHeight, navInitialTop: nav.offsetTop  });
     window.addEventListener('scroll', this.handleScroll);
+    // console.log('App', this.state);
   };
   
   componentDidUpdate() {
     const header = document.querySelector('.header');
     header.style.top = `-${this.state.scroll}px`;
-    this.state.scroll > this.state.navInitialTop
-    ? document.body.style.paddingTop = `${this.state.height}px` 
-    : document.body.style.paddingTop = 0;
+    // this.state.scroll >= this.state.navInitialTop
+    // ? document.body.style.paddingTop = `${this.state.height}px` 
+    // : document.body.style.paddingTop = 0;
+    // if (this.state.scroll >= this.state.navInitialTop) {
+      // document.body.style.paddingTop = `${this.state.height}px`;
+      // console.log('body style applied');
+    // } else {
+    //   document.body.style.paddingTop = 0;
+    // }
   }
 
   componentWillUnmount() {

@@ -48,6 +48,10 @@ h3,
   z-index: 10;
 }
 
+.App .header .header-logo-title {
+  
+}
+
 .App .header img {
   justify-self: center;
   height: 10rem;
