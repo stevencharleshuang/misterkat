@@ -11,12 +11,12 @@ export default function RecipesList(props) {
         title={recipe.name}
       >
         <h3 title={recipe.name}>
-          <a 
-            href="#"
+          <span 
+            className="span-link"
             title={recipe.name}
           >
             {recipe.name}
-          </a>
+          </span>
         </h3>
         <img 
           alt={recipe.name} 

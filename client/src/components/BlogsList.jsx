@@ -15,7 +15,7 @@ export default function BlogsList(props) {
           title={blog.title}
           onClick={props.handleClick}
         >
-          <h2><a href="#" title={blog.title}>{blog.title}</a></h2>
+          <h2><span className="span-link" title={blog.title}>{blog.title}</span></h2>
           <p title={blog.title}>{blog.content.slice(0, 100).concat('...')}</p>
         </div>
       </article>

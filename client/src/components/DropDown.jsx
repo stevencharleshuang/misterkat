@@ -25,7 +25,7 @@ export default class DropDown extends React.Component {
   }
 
   render() {
-    console.log('DropDown State', this.state);
+    // console.log('DropDown State', this.state);
     return(
       <div 
           className="nav-btn dropdown" 

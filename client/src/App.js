@@ -25,7 +25,6 @@ class App extends React.Component {
   
   componentDidUpdate() {
     const header = document.querySelector('.header');
-    console.log({header});
     header.style.top = `-${this.state.scroll}px`;
     this.state.scroll > this.state.navInitialTop
     ? document.body.style.paddingTop = `${this.state.height}px` 
@@ -55,7 +54,7 @@ class App extends React.Component {
     // }
   }
   render() {
-    console.log('App.js State: ', this.state);
+    // console.log('App.js State: ', this.state);
     return (
       <div className="App">
         <Header 
