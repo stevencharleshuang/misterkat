@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Nav(props) {
   return(
-    <nav className={props.scroll > props.top ? "sticky" : ""}>
+    <nav className={props.scroll > props.navInitialTop ? "sticky" : ""}>
       <DropDown 
         displayDropDown={props.displayDropDown}
         handleNavClick={props.handleNavClick} 

@@ -19,12 +19,15 @@ class App extends React.Component {
   // Stick Nav pattern adapted from https://mattgaskey.com/blog/sticky-nav-in-react/
   componentDidMount() {
     const nav = document.querySelector('nav');
-    this.setState({ top: nav.offsetTop, height: nav.offsetHeight  });
+    this.setState({ top: nav.offsetTop, height: nav.offsetHeight, navInitialTop: nav.offsetTop  });
     window.addEventListener('scroll', this.handleScroll);
   };
   
   componentDidUpdate() {
-    this.state.scroll > this.state.top 
+    const header = document.querySelector('.header');
+    console.log({header});
+    header.style.top = `-${this.state.scroll}px`;
+    this.state.scroll > this.state.navInitialTop
     ? document.body.style.paddingTop = `${this.state.height}px` 
     : document.body.style.paddingTop = 0;
   }
@@ -34,7 +37,10 @@ class App extends React.Component {
   };
   
   handleScroll = () => {
-    this.setState({ scroll: window.scrollY });
+    this.setState({ 
+      scroll: window.scrollY,
+      top: `-${this.state.scroll}` 
+    });
   };
 
   handleNavClick = (e) => {
@@ -57,6 +63,7 @@ class App extends React.Component {
           handleNavClick={this.handleNavClick}
           scroll={this.state.scroll}
           top={this.state.top}
+          navInitialTop={this.state.navInitialTop}
         />
         <main onScroll={this.handleScroll}>
           <Switch>
