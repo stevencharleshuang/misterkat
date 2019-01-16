@@ -31,8 +31,7 @@ h3,
 
 .App a:hover, 
 .App a:active,
-.App .span-link:hover,
-.App .header nav .dropdown:hover {
+.App .span-link:hover {
   color: darkorange;
   text-decoration: underline #404040;
 }
@@ -48,8 +47,9 @@ h3,
   z-index: 10;
 }
 
-.App .header .header-logo-title {
-  
+.App .header .header-logo h1 {
+  font-size: 2.4rem;
+  color: darkorange;
 }
 
 .App .header img {
@@ -102,7 +102,12 @@ h3,
   list-style-type: none;
   padding: 1rem;
   position: fixed;
-  top: 242px;
+  margin: 0;
+  /* top: 242px; */
+}
+
+.App .header nav .dropdown .dropdown-list a:hover {
+  color: white;
 }
 
 .App .header nav .dropdown .dropdown-list .dropdown-list-item {
@@ -120,7 +125,7 @@ h3,
 .App main {
   /* margin: 242px 0 0; */
   position: relative;
-  top: 242px;
+  /* top: 242px; */
   z-index: 0;
 }
 
@@ -173,6 +178,7 @@ h3,
 }
 
 .App .span-link:hover,
+.App .header nav .nav-btn:hover,
 .App .blogs .blogs-list .blog-post:hover,
 .App .blogs .blogs-list .blog-post img:hover,
 .App .blogs .blogs-list .blog-post .blog-excerpt:hover {

@@ -20,7 +20,9 @@ class App extends React.Component {
   componentDidMount() {
     const nav = document.querySelector('nav');
     const main = document.querySelector('main');
-    main.style.paddingTop = `${nav.offsetTop}`;
+    const header = document.querySelector('.header');
+    // console.log(nav.offsetHeight, nav.offsetTop, main, header.offsetHeight)
+    main.style.top = `${header.offsetHeight}px`;
     this.setState({ top: nav.offsetTop, height: nav.offsetHeight, navInitialTop: nav.offsetTop  });
     window.addEventListener('scroll', this.handleScroll);
     // console.log('App', this.state);
@@ -52,7 +54,7 @@ class App extends React.Component {
   };
 
   handleNavClick = (e) => {
-    console.log('Nav button clicked!', e.target.id);
+    // console.log('Nav button clicked!', e.target.id);
     // this.setState(({
     //   navSelection: e.target.id
     // }));

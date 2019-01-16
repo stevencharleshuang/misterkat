@@ -30,21 +30,22 @@ export default class DropDown extends React.Component {
       <div 
           className="nav-btn dropdown" 
           id="misterkat-adventures" 
-          onClick={this.showDropDown}
+          onMouseEnter={this.showDropDown}
+          onMouseLeave={this.hideDropDown}
           // onClick={this.props.handleNavClick}
           >
           MisterKat Adventures
           {
             this.state.displayDropDown
             ? <ul className="dropdown-list">
+              <Link to="/misterkat-adventures">
               <li 
                 className="dropdown-list-item" 
                 id="local"
               >
-              <Link to="/misterkat-adventures">
                 Local
-              </Link>
               </li>
+              </Link>
               <li 
                 className="dropdown-list-item" 
                 id="east-coast"
