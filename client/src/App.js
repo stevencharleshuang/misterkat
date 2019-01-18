@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // navSelection: '',
+      navSelection: '',
       // displayDropDown: false,
     };
   }
@@ -56,15 +56,15 @@ class App extends React.Component {
   };
 
   handleNavClick = (e) => {
-    // console.log('Nav button clicked!', e.target.id);
-    // this.setState(({
-    //   navSelection: e.target.id
-    // }));
-    // if (e.target.id !== 'misterkat-adventures') {
-    //   this.setState({
-    //     displayDropDown: false,
-    //   });
-    // }
+    console.log('Nav button clicked!', e.target.id);
+    this.setState(({
+      navSelection: e.target.id
+    }));
+    if (e.target.id !== 'misterkat-adventures') {
+      this.setState({
+        displayDropDown: false,
+      });
+    }
   }
   render() {
     // console.log('App.js State: ', this.state);
@@ -79,8 +79,11 @@ class App extends React.Component {
         />
         <main onScroll={this.handleScroll}>
           <Switch>
+            <Route 
+              path="/misterkat-adventures" 
+              render={props => <Blogs {...props} navSelection={this.state.navSelection} />}
+            />
             <Route path="/meet-misterkat" component={About} />
-            <Route path="/misterkat-adventures" component={Blogs} />
             <Route path="/katatatouille" component={Recipes} />
             <Route path="/" component={Hero} />
           </Switch>

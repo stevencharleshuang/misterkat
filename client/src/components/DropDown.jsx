@@ -39,31 +39,41 @@ export default class DropDown extends React.Component {
             this.state.displayDropDown
             ? <ul className="dropdown-list">
               <Link to="/misterkat-adventures">
-              <li 
-                className="dropdown-list-item" 
-                id="local"
-              >
-                Local
-              </li>
+                <li 
+                  className="dropdown-list-item" 
+                  id="local"
+                  onClick={this.props.handleNavClick}
+                  >
+                  Local
+                </li>
               </Link>
-              <li 
-                className="dropdown-list-item" 
-                id="east-coast"
-              >
-                East Coast
-              </li>
-              <li 
-                className="dropdown-list-item" 
-                id="usa"
-              >
-                USA
-              </li>
-              <li 
-                className="dropdown-list-item" 
-                id="international"
-              >
-                International
-              </li>
+              <Link to="/misterkat-adventures">
+                <li 
+                  className="dropdown-list-item" 
+                  id="east-coast"
+                  onClick={this.props.handleNavClick}
+                  >
+                  East Coast
+                </li>
+              </Link>
+              <Link to="/misterkat-adventures">
+                <li 
+                  className="dropdown-list-item" 
+                  id="usa"
+                  onClick={this.props.handleNavClick}
+                  >
+                  USA
+                </li>
+              </Link>
+              <Link to="/misterkat-adventures">
+                <li 
+                  className="dropdown-list-item" 
+                  id="international"
+                  onClick={this.props.handleNavClick}
+                  >
+                  International
+                </li>
+              </Link>
             </ul>
             : null
           }

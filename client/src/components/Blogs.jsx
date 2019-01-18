@@ -61,9 +61,11 @@ export default class Blogs extends React.Component {
   }
 
   render() {
+    console.log('Blogs props', this.props);
     return (
       <div className="blogs">
         <h1>MisterKat Adventures</h1>
+        <h2>{this.props.navSelection}</h2>
         {
           (this.state.selectedBlog !== '')
           ? <Blog  
