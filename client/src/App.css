@@ -71,10 +71,10 @@ h3,
   display: flex;
   flex-flow: row nowrap;
   /* height: 10rem; */
-  justify-content: space-around; 
+  justify-content: center; 
   margin: 0;
   top: 0;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
   width: 100%;
 }
 
@@ -301,5 +301,14 @@ h3,
   background-color: white;
   position: fixed;
   top: 0;
+  width: 100%;
+}
+
+.App footer {
+  bottom: 0;
+  /* height: 3rem; */
+  margin: 0;
+  padding: 0;
+  position: fixed;
   width: 100%;
 }

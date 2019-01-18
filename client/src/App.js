@@ -3,6 +3,7 @@ import { Switch, Route, } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Blogs from './components/Blogs';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Recipes from './components/Recipes';
@@ -83,6 +84,7 @@ class App extends React.Component {
             <Route path="/" component={Hero} />
           </Switch>
         </main>
+        <Footer />
       </div>
     );
   }
