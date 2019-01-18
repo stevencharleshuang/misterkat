@@ -10,6 +10,7 @@ export default class Local extends React.Component {
   render() {
     return(
       <div className="local">
+        <h1>Local</h1>
       </div>
     );
   }

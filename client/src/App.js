@@ -2,11 +2,15 @@ import React from 'react';
 import { Switch, Route, } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
-import Blogs from './components/Blogs';
+// import Blogs from './components/Blogs';
+import EastCoast from './components/EastCoast';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import International from './components/International'
+import Local from './components/Local';
 import Recipes from './components/Recipes';
+import USA from './components/USA';
 
 class App extends React.Component {
   constructor(props) {
@@ -80,7 +84,11 @@ class App extends React.Component {
         <main onScroll={this.handleScroll}>
           <Switch>
             <Route path="/meet-misterkat" component={About} />
-            <Route path="/misterkat-adventures" component={Blogs} />
+            <Route path="/misterkat-adventures/east-coast" component={EastCoast} />
+            <Route path="/misterkat-adventures/international" component={International} />
+            <Route path="/misterkat-adventures/local" component={Local} />
+            <Route path="/misterkat-adventures/usa" component={USA} />
+            {/* <Route path="/misterkat-adventures" component={Blogs} /> */}
             <Route path="/katatatouille" component={Recipes} />
             <Route path="/" component={Hero} />
           </Switch>

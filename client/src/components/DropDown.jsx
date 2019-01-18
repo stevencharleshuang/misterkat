@@ -38,7 +38,7 @@ export default class DropDown extends React.Component {
           {
             this.state.displayDropDown
             ? <ul className="dropdown-list">
-              <Link to="/misterkat-adventures">
+              <Link to="/misterkat-adventures/local">
               <li 
                 className="dropdown-list-item" 
                 id="local"
@@ -46,24 +46,30 @@ export default class DropDown extends React.Component {
                 Local
               </li>
               </Link>
-              <li 
-                className="dropdown-list-item" 
-                id="east-coast"
-              >
-                East Coast
-              </li>
-              <li 
-                className="dropdown-list-item" 
-                id="usa"
-              >
-                USA
-              </li>
-              <li 
-                className="dropdown-list-item" 
-                id="international"
-              >
-                International
-              </li>
+              <Link to="/misterkat-adventures/east-coast">
+                <li 
+                  className="dropdown-list-item" 
+                  id="east-coast"
+                  >
+                  East Coast
+                </li>
+              </Link>
+              <Link to="/misterkat-adventures/usa">
+                <li 
+                  className="dropdown-list-item" 
+                  id="usa"
+                  >
+                  USA
+                </li>
+              </Link>
+              <Link to="/misterkat-adventures/international" >
+                <li 
+                  className="dropdown-list-item" 
+                  id="international"
+                  >
+                  International
+                </li>
+              </Link>
             </ul>
             : null
           }

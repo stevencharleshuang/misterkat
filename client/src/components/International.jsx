@@ -10,6 +10,7 @@ export default class International extends React.Component {
   render() {
     return(
       <div className="international">
+        <h1>International</h1>
       </div>
     );
   }

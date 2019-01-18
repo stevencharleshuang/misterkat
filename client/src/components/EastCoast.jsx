@@ -10,6 +10,7 @@ export default class EastCoast extends React.Component {
   render() {
     return(
       <div className="east-coast">
+        <h1>East Coast</h1>
       </div>
     );
   }
