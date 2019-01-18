@@ -24,6 +24,7 @@ class App extends React.Component {
     const header = document.querySelector('.header');
     // console.log(nav.offsetHeight, nav.offsetTop, main, header.offsetHeight)
     main.style.top = `${header.offsetHeight}px`;
+    
     this.setState({ top: nav.offsetTop, height: nav.offsetHeight, navInitialTop: nav.offsetTop  });
     window.addEventListener('scroll', this.handleScroll);
     // console.log('App', this.state);
@@ -32,6 +33,12 @@ class App extends React.Component {
   componentDidUpdate() {
     const header = document.querySelector('.header');
     header.style.top = `-${this.state.scroll}px`;
+    const main = document.querySelector('main');
+    const mainHeight = main.offsetTop;
+    const footer = document.querySelector('footer');
+    footer.style.bottom = `-${mainHeight}px`;
+    // console.log({mainHeight});
+
     // this.state.scroll >= this.state.navInitialTop
     // ? document.body.style.paddingTop = `${this.state.height}px` 
     // : document.body.style.paddingTop = 0;

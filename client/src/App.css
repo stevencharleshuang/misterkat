@@ -305,10 +305,15 @@ h3,
 }
 
 .App footer {
+  background: white;
   bottom: 0;
-  /* height: 3rem; */
+  height: auto;
   margin: 0;
-  padding: 0;
-  position: fixed;
+  padding: 0.5rem;
+  position: relative;
   width: 100%;
+}
+
+.App footer h1 {
+  display: inline;
 }
