@@ -2,7 +2,7 @@ import React from 'react';
 import Blog from './Blog';
 import BlogsList from './BlogsList';
 
-export default class Recipes extends React.Component {
+export default class Blogs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

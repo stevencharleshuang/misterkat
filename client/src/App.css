@@ -307,6 +307,8 @@ h3,
 .App footer {
   background: white;
   bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
   height: auto;
   margin: 0;
   padding: 0.5rem;
@@ -316,4 +318,8 @@ h3,
 
 .App footer h1 {
   display: inline;
+}
+
+.App footer span {
+  font-size: 1rem;
 }
