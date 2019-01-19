@@ -6,6 +6,7 @@ export default class Blogs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedRegion: this.props.navSelection || '',
       selectedBlog: '',
       // blogs array of objects to be refactored once fetching from the back end is integrated
       // Dummy images and content taken from Lyn Mettler's article on U.S. News "The 30 Best Places to Travel Alone"
@@ -45,6 +46,22 @@ export default class Blogs extends React.Component {
     }
   }
 
+  componentDidMount() {
+    if (this.props.navSelection !== this.state.selectedRegion) {
+      this.setState({
+        selectedRegion: this.props.navSelection
+      });
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.navSelection !== this.state.selectedRegion) {
+      this.setState({
+        selectedRegion: this.props.navSelection
+      });
+    }
+  }
+
   handleClick = (e) => {
     // console.log('handleclick:', e.target.title);
     let id = e.target.title;
@@ -62,6 +79,7 @@ export default class Blogs extends React.Component {
 
   render() {
     console.log('Blogs props', this.props);
+    console.log('Blogs state', this.state);
     return (
       <div className="blogs">
         <h1>MisterKat Adventures</h1>
