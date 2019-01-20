@@ -91,8 +91,8 @@ export default class Blogs extends React.Component {
   }
 
   render() {
-    console.log('Blogs props', this.props);
-    console.log('Blogs state', this.state);
+    // console.log('Blogs props', this.props);
+    // console.log('Blogs state', this.state);
     let selectedRegion = '';
     switch(this.state.selectedRegion) {
       case 'local':
@@ -110,16 +110,17 @@ export default class Blogs extends React.Component {
       default:
         selectedRegion = '';
     }
-    console.log({ selectedRegion });
+    // console.log({ selectedRegion });
     return (
       <div className="blogs">
-        <h1>MisterKat Adventures</h1>
-        {(selectedRegion !== undefined) ?
-          <h2>{selectedRegion}</h2> :
-          null
-        }
-        {
-          (this.state.selectedBlog !== '')
+        <h1>
+          MisterKat's&nbsp;
+          {(selectedRegion !== undefined) ?
+            selectedRegion :
+            null}
+          &nbsp;Adventures 
+        </h1>
+        {(this.state.selectedBlog !== '')
           ? <Blog  
               selectedBlog={this.state.selectedBlog}
               handleClearSelection={this.handleClearSelection}
@@ -128,8 +129,7 @@ export default class Blogs extends React.Component {
             blogs={this.state.blogs} 
             selectedBlog={this.state.selectedBlog}
             handleClick={this.handleClick}
-          />
-        }
+          />}
       </div>
     );
   }

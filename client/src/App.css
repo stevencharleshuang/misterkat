@@ -146,6 +146,10 @@ h3,
   margin-bottom: 3rem;
 }
 
+.App .blogs h2 {
+  font-size: 1.6rem;
+}
+
 .App .blogs .blogs-list {
   
 }
