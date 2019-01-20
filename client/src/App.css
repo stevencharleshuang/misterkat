@@ -106,8 +106,9 @@ h3,
   /* top: 242px; */
 }
 
-.App .header nav .dropdown .dropdown-list a:hover {
+.App .header nav .dropdown .dropdown-list-item:hover {
   color: white;
+  text-decoration: underline black;
 }
 
 .App .header nav .dropdown .dropdown-list .dropdown-list-item {
@@ -143,6 +144,10 @@ h3,
 
 .App .blogs {
   margin-bottom: 3rem;
+}
+
+.App .blogs h2 {
+  font-size: 1.6rem;
 }
 
 .App .blogs .blogs-list {
