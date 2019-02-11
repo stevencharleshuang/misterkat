@@ -13,7 +13,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       navSelection: '',
-      // displayDropDown: false,
     };
   }
 
@@ -22,8 +21,7 @@ class App extends React.Component {
     const nav = document.querySelector('nav');
     const main = document.querySelector('main');
     const header = document.querySelector('.header');
-    // console.log({mainHeight});
-    // console.log(nav.offsetHeight, nav.offsetTop, main, header.offsetHeight)
+
     main.style.top = `${header.offsetHeight}px`;
     this.setState({ 
       top: nav.offsetTop, 
@@ -31,17 +29,16 @@ class App extends React.Component {
       navInitialTop: nav.offsetTop  
     });
     window.addEventListener('scroll', this.handleScroll);
-    // console.log('App', this.state);
   };
   
   componentDidUpdate() {
     const header = document.querySelector('.header');
-    header.style.top = `-${this.state.scroll}px`;
     const main = document.querySelector('main');
     const mainHeight = main.offsetTop;
     const footer = document.querySelector('footer');
+
+    header.style.top = `-${this.state.scroll}px`;
     footer.style.bottom = `-${mainHeight}px`;
-    // console.log({mainHeight});
   }
 
   componentWillUnmount() {
@@ -56,10 +53,10 @@ class App extends React.Component {
   };
 
   handleNavClick = (e) => {
-    console.log('Nav button clicked!', e.target.id);
     this.setState(({
       navSelection: e.target.id
     }));
+
     if (e.target.id !== 'misterkat-adventures') {
       this.setState({
         displayDropDown: false,

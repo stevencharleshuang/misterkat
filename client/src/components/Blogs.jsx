@@ -69,6 +69,7 @@ export default class Blogs extends React.Component {
           selectedRegionBlogs.push(blog);
         }
       }
+
       this.setState({
         selectedRegion: this.props.navSelection,
         blogs: selectedRegionBlogs
@@ -79,6 +80,7 @@ export default class Blogs extends React.Component {
   handleClick = (e) => {
     let id = e.target.title;
     let selectedBlog = this.state.blogs.filter(blog => blog.title === id);
+
     this.setState({
       selectedBlog,
     });
@@ -94,6 +96,7 @@ export default class Blogs extends React.Component {
     // console.log('Blogs props', this.props);
     // console.log('Blogs state', this.state);
     let selectedRegion = '';
+
     switch(this.state.selectedRegion) {
       case 'local':
         selectedRegion = 'Local';
@@ -110,7 +113,7 @@ export default class Blogs extends React.Component {
       default:
         selectedRegion = '';
     }
-    // console.log({ selectedRegion });
+
     return (
       <div className="blogs">
         <h1>
@@ -120,12 +123,12 @@ export default class Blogs extends React.Component {
             null}
           &nbsp;Adventures 
         </h1>
-        {(this.state.selectedBlog !== '')
-          ? <Blog  
+        {(this.state.selectedBlog !== '') ? 
+          <Blog  
               selectedBlog={this.state.selectedBlog}
               handleClearSelection={this.handleClearSelection}
-            />
-          : <BlogsList 
+          /> : 
+          <BlogsList 
             blogs={this.state.blogs} 
             selectedBlog={this.state.selectedBlog}
             handleClick={this.handleClick}

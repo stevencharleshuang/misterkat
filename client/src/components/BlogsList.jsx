@@ -21,9 +21,15 @@ export default function BlogsList(props) {
       </article>
     );
   });
+  let message = 'No blogs for this region yet. Please try another region and check back soon!';
   return (
     <div className="blogs-list">
-      {BlogsSelection}
+      {props.blogs.length > 0 ? (
+          BlogsSelection 
+        ) : (
+          <h2>{message}</h2>
+        )}
+      
     </div>
   );
 }
